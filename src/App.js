@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 
 import { getBeans } from "./mock-data.js";
-import { SearchBar } from "./components/search-bar.js";
+import { SearchBar } from "./components/search-bar/search-bar.js";
 import { BeanButton } from "./components/bean-button/bean-button.js";
 import "./App.css";
 
