@@ -1,5 +1,6 @@
 import { useState } from "react";
 
+import { BeanButton } from "./components/bean-button/bean-button.js";
 import "./App.css";
 
 function App() {
