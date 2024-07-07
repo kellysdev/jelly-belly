@@ -39,7 +39,7 @@ function App() {
               return bean.flavorName.toLowerCase().includes(searchInput.toLowerCase());
             }
           }).map((bean) => (
-            <BeanButton bean={bean} />
+            <BeanButton bean={bean} key={bean.beanId} />
           ))
         }
       </div>
