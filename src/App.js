@@ -1,11 +1,17 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
+import { getBeans } from "./mock-data.js";
+import { SearchBar } from "./components/search-bar.js";
 import { BeanButton } from "./components/bean-button/bean-button.js";
 import "./App.css";
 
 function App() {
   const [beans, setBeans] = useState([]);
   const [searchInput, setSearchInput] = useState("");
+
+  useEffect(() => {
+    setBeans(getBeans);
+  }, [])
 
 
   return (
