@@ -13,6 +13,20 @@ function App() {
     setBeans(getBeans);
   }, [])
 
+  const getRandomBean = () => {
+    // get length of list of beans
+    let numOfBeans = beans.length;
+
+    // get random number between 1 and numOfBeans
+    // let randomNum = Math.floor(Math.random() * (numOfBeans )) + 1;
+
+    // get random number between 0 and numOfBeans for use with mock data:
+    let randomNum = Math.floor(Math.random() * (numOfBeans ));
+
+    //from mock data for now:
+    let singleBean  = beans[randomNum]
+    console.log(singleBean);
+  };
 
   return (
     <div className="App">
@@ -27,7 +41,7 @@ function App() {
 
       <div className="find-bean-wrapper">
           <p>OR</p>
-          <button>Find a Random Jelly Bean</button>
+          <button onClick={getRandomBean}>Find a Random Jelly Bean</button>
       </div>
 
       <div className="bean-list">
