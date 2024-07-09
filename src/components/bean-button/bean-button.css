@@ -7,6 +7,10 @@
   background-color: transparent;
 }
 
+.bean-button:hover {
+  cursor: pointer;
+}
+
 .bean-image {
   width: 100px;
 }
