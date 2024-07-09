@@ -3,15 +3,27 @@ import { useState, useEffect } from "react";
 import { getBeans } from "./mock-data.js";
 import { SearchBar } from "./components/search-bar/search-bar.js";
 import { BeanButton } from "./components/bean-button/bean-button.js";
+import { Modal } from "./components/modal/modal.js";
 import "./App.css";
 
 function App() {
   const [beans, setBeans] = useState([]);
   const [searchInput, setSearchInput] = useState("");
+  const [showModal, setShowModal] = useState(false);
+  const [singleBean, setSingleBean] = useState({});
 
   useEffect(() => {
     setBeans(getBeans);
   }, [])
+
+  // modal handling
+  const openModal = () => {
+    setShowModal(true);
+  };
+
+  const closeModal = () => {
+    setShowModal(false);
+  };
 
   const getRandomBean = () => {
     // get length of list of beans
@@ -26,6 +38,8 @@ function App() {
     //from mock data for now:
     let singleBean  = beans[randomNum]
     console.log(singleBean);
+    setSingleBean(singleBean);
+    openModal();
   };
 
   return (
@@ -41,7 +55,13 @@ function App() {
 
       <div className="find-bean-wrapper">
           <p>OR</p>
-          <button onClick={getRandomBean}>Find a Random Jelly Bean</button>
+
+          <button 
+            className=""
+            onClick={getRandomBean}
+          >
+            Find a Random Jelly Bean
+          </button>
       </div>
 
       <div className="bean-list">
@@ -57,6 +77,12 @@ function App() {
           ))
         }
       </div>
+
+      <Modal 
+        showModal={showModal} closeModal={closeModal} 
+        singleBean={singleBean}
+      />
+      
     </div>
   );
 }

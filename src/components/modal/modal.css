@@ -1,0 +1,20 @@
+.modal-view {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  z-index: 1;
+}
+
+.modal-box {
+  padding: 5%;
+  margin: auto;
+  width: 65%;
+  background-color: #FFF;
+  z-index: 5;
+  text-align: left;
+}
