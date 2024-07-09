@@ -1,4 +1,12 @@
 .bean-button {
   display: flex;
+  flex-direction: column;
   align-items: center;
+  border: none;
+  margin: 10px;
+  background-color: transparent;
+}
+
+.bean-image {
+  width: 100px;
 }
