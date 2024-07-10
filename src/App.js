@@ -18,7 +18,7 @@ function App() {
   }, [])
 
   // modal handling
-  const openModal = () => {
+  const openModal = () => {;
     setShowModal(true);
   };
   const closeModal = () => {
@@ -74,7 +74,11 @@ function App() {
               return bean.flavorName.toLowerCase().includes(searchInput.toLowerCase());
             }
           }).map((bean) => (
-            <BeanButton bean={bean} key={bean.beanId} />
+            <BeanButton 
+              bean={bean} key={bean.beanId} 
+              setSingleBean={setSingleBean} openModal={openModal}
+              singleBean={singleBean}
+            />
           ))
         }
       </div>
