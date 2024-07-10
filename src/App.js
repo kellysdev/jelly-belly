@@ -12,6 +12,7 @@ function App() {
   const [showModal, setShowModal] = useState(false);
   const [singleBean, setSingleBean] = useState({});
 
+  // load list of jelly bean flavors when the app renders
   useEffect(() => {
     setBeans(getBeans);
   }, [])
@@ -20,11 +21,11 @@ function App() {
   const openModal = () => {
     setShowModal(true);
   };
-
   const closeModal = () => {
     setShowModal(false);
   };
 
+  // handler for clicking random bean button
   const getRandomBean = () => {
     // get length of list of beans
     let numOfBeans = beans.length;
