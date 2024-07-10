@@ -9,16 +9,16 @@ export const Modal = ({ showModal, closeModal, singleBean }) => {
       <div className="modal-box">
         <h1 className="lobster">{singleBean.flavorName}</h1>
 
-        <div className="singlebean-descriptive-text">
+        <div className="main-content">
           <img
             src={singleBean.imageUrl} alt={singleBean.flavorName} 
             className="modal-bean-image"
           />
           <p>
-            {singleBean.groupName}
+            <b>{singleBean.description}</b>
             <br />
             <br />
-            {singleBean.description}
+            {(singleBean.groupName).reduce((p, c) => [p, <br />, c])}
           </p>
         </div>
 
@@ -27,6 +27,8 @@ export const Modal = ({ showModal, closeModal, singleBean }) => {
           {singleBean.ingredients}
         </p>
       </div>
+
+
 
     </div>
   );
