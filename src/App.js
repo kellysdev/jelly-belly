@@ -38,7 +38,6 @@ function App() {
 
     //from mock data for now:
     let singleBean  = beans[randomNum]
-    console.log(singleBean);
     setSingleBean(singleBean);
     openModal();
   };
