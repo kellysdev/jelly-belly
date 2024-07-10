@@ -14,7 +14,13 @@ export const Modal = ({ showModal, closeModal, singleBean }) => {
             src={singleBean.imageUrl} alt={singleBean.flavorName} 
             className="modal-bean-image"
           />
-          <p>
+          <p
+            className="descriptive-text"
+            style={{
+              border: `2px solid ${singleBean.backgroundColor}`,
+              boxShadow: `2px 2px 0px 0px ${singleBean.backgroundColor}`
+            }}
+          >
             <b>{singleBean.description}</b>
             <br />
             <br />
@@ -22,10 +28,7 @@ export const Modal = ({ showModal, closeModal, singleBean }) => {
           </p>
         </div>
 
-        <p
-          className="ingredients" 
-          style={{ border: `2px solid ${singleBean.backgroundColor}`}}
-        >
+        <p className="ingredients" >
           Ingredients:<br />
           {(singleBean.ingredients).join(", ")}
         </p>

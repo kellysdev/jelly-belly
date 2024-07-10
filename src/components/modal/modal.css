@@ -23,6 +23,7 @@
   background-color: #FFF;
   z-index: 5;
   text-align: left;
+  border-radius: 10px;
 }
 
 .main-content {
@@ -30,6 +31,7 @@
   flex-direction: row;
 }
 
-.ingredients {
-  padding: 10px
+.descriptive-text {
+  padding: 10px;
+  border-radius: 10px;
 }
