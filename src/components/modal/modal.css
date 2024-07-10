@@ -24,3 +24,8 @@
   z-index: 5;
   text-align: left;
 }
+
+.main-content {
+  display: flex;
+  flex-direction: row;
+}
