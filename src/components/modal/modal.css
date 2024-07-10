@@ -35,3 +35,8 @@
   padding: 10px;
   border-radius: 10px;
 }
+
+img {
+  max-width: 220px;
+  max-height: 150px;
+}
