@@ -24,7 +24,7 @@ export const Modal = ({ showModal, closeModal, singleBean }) => {
 
         <p
           className="ingredients" 
-          style={{ border: `2px solid ${singleBean.backgroundColor}`}} className="ingredients"
+          style={{ border: `2px solid ${singleBean.backgroundColor}`}}
         >
           Ingredients:<br />
           {(singleBean.ingredients).join(", ")}
