@@ -44,7 +44,7 @@ function App() {
 
   return (
     <div className="App">
-      <h1 className="app-title">Jelly Beans</h1>
+      <h1 className="lobster">Jelly Beans</h1>
 
       <SearchBar 
         onSearchTermChange={(searchInput) => {
@@ -54,7 +54,7 @@ function App() {
       />
 
       <div className="find-bean-wrapper">
-          <p>OR</p>
+          <h2 className="lobster">or</h2>
 
           <button 
             className="randomButton"
