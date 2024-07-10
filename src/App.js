@@ -57,7 +57,7 @@ function App() {
           <p>OR</p>
 
           <button 
-            className=""
+            className="randomButton"
             onClick={getRandomBean}
           >
             Find a Random Jelly Bean
