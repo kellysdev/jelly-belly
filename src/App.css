@@ -11,6 +11,13 @@
   font-style: normal;
 }
 
+.randomButton {
+  padding: 10px;
+  border-radius: 10px;
+  background-color: #ffc2d1;
+  box-shadow: 2px 2px 0px 0px #000;
+}
+
 .bean-list {
   display: flex;
   flex-wrap: wrap;
