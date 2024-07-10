@@ -7,7 +7,7 @@ export const Modal = ({ showModal, closeModal, singleBean }) => {
     <div className="modal-view" onClick={closeModal}>
 
       <div className="modal-box">
-        <h2>{singleBean.flavorName}</h2>
+        <h1 className="lobster">{singleBean.flavorName}</h1>
 
         <div className="singlebean-descriptive-text">
           <img
