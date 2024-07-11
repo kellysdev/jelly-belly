@@ -30,6 +30,9 @@ function App() {
 
   // handler for clicking random bean button
   const getRandomBean = () => {
+    if (beans.length === 0) {
+      return console.log("There are no beans.");
+    }
     // get a random number, id
     const numOfBeans = beans.length;
     const id = Math.floor(Math.random() * (numOfBeans));
