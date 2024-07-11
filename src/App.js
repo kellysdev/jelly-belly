@@ -30,18 +30,16 @@ function App() {
 
   // handler for clicking random bean button
   const getRandomBean = () => {
-    // get length of list of beans
-    let numOfBeans = beans.length;
+    // get a random number, id
+    const numOfBeans = beans.length;
+    const id = Math.floor(Math.random() * (numOfBeans));
 
-    // get random number between 1 and numOfBeans
-    // let randomNum = Math.floor(Math.random() * (numOfBeans )) + 1;
+    // pass random number to fetch call
+    fetch(`${process.env.REACT_APP_API_URL}/api/beans/${id}`)
+    .then((singleBean) => {
+      setSingleBean(singleBean);
+    });
 
-    // get random number between 0 and numOfBeans for use with mock data:
-    let randomNum = Math.floor(Math.random() * (numOfBeans ));
-
-    //from mock data for now:
-    let singleBean  = beans[randomNum]
-    setSingleBean(singleBean);
     openModal();
   };
 
