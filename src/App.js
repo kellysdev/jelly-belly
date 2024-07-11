@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-import { getBeans } from "./mock-data.js";
+// import { getBeans } from "./mock-data.js";
 import { SearchBar } from "./components/search-bar/search-bar.js";
 import { BeanButton } from "./components/bean-button/bean-button.js";
 import { Modal } from "./components/modal/modal.js";
@@ -14,7 +14,10 @@ function App() {
 
   // load list of jelly bean flavors when the app renders
   useEffect(() => {
-    setBeans(getBeans);
+    fetch(`${process.env.REACT_APP_API_URL}/api/beans/id`)
+    .then((beans) =>{
+      setBeans(beans);
+    });
   }, [])
 
   // modal handling
