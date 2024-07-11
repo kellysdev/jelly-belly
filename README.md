@@ -21,4 +21,6 @@ The full website is deployed on AWS.
 
 ## Content and Sources
 
-The content, including images and data, has been sourced from the official Jelly Belly website [www.jellybelly.com](www.jellybelly.com).  The API used to fetch data is the [https://jelly-belly-wiki.netlify.app/](Jelly Belly Wiki API).
+The content, including images and data, has been sourced from the [official Jelly Belly website](www.jellybelly.com).  The API used to fetch data is the [Jelly Belly Wiki API][1].
+
+[1]: https://jelly-belly-wiki.netlify.app/api/
