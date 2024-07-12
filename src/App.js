@@ -14,10 +14,12 @@ function App() {
 
   // load list of jelly bean flavors when the app renders
   useEffect(() => {
-    fetch(`${process.env.REACT_APP_API_URL}/api/beans/id`)
-    .then((beans) =>{
-      setBeans(beans);
-    });
+    fetch(`${process.env.REACT_APP_API_URL}/api/beans`)
+    .then(response => response.json())
+    .then((data) =>{
+      setBeans(data.items);
+    })
+    .catch((error) => console.log("Error fetching beans:", error));
   }, [])
 
   // modal handling
