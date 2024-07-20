@@ -12,6 +12,10 @@ function App() {
   const [singleBean, setSingleBean] = useState({});
   const [loading, setLoading] = useState(true);
 
+  const override: CSSProperties = {
+    margin: "100px auto"
+  }
+
   // load list of jelly bean flavors when the app renders
   useEffect(() => {
     fetch(`${process.env.REACT_APP_API_URL}/api/beans`)
@@ -71,9 +75,11 @@ function App() {
           </button>
       </div>
 
-      <div className="loading-spinner">
-        <PulseLoader loading={loading} size={25} color="#000" aria-label="Loading Spinner" />
-      </div>
+      <PulseLoader
+       loading={loading} size={18} margin={10} color="#000" 
+       aria-label="Loading Spinner"
+       cssOverride={override}
+      />
 
       <div className="bean-list">
         {
