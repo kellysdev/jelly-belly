@@ -12,7 +12,7 @@ function App() {
   const [singleBean, setSingleBean] = useState({});
   const [loading, setLoading] = useState(true);
 
-  const override: CSSProperties = {
+  const override = {
     margin: "100px auto"
   }
 
