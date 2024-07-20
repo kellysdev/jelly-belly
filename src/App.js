@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { SearchBar } from "./components/search-bar/search-bar.js";
 import { BeanButton } from "./components/bean-button/bean-button.js";
 import { Modal } from "./components/modal/modal.js";
+import PulseLoader from "react-spinners/PulseLoader.js";
 import "./App.css";
 
 function App() {
@@ -9,12 +10,14 @@ function App() {
   const [searchInput, setSearchInput] = useState("");
   const [showModal, setShowModal] = useState(false);
   const [singleBean, setSingleBean] = useState({});
+  const [loading, setLoading] = useState(true);
 
   // load list of jelly bean flavors when the app renders
   useEffect(() => {
     fetch(`${process.env.REACT_APP_API_URL}/api/beans`)
     .then(response => response.json())
     .then((data) =>{
+      setLoading(false);
       setBeans(data.items);
     })
     .catch((error) => console.log("Error fetching beans:", error));
@@ -66,6 +69,10 @@ function App() {
           >
             Find a Random Jelly Bean
           </button>
+      </div>
+
+      <div className="loading-spinner">
+        <PulseLoader loading={loading} size={25} color="#000" aria-label="Loading Spinner" />
       </div>
 
       <div className="bean-list">
